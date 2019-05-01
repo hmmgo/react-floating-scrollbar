@@ -1,0 +1,47 @@
+
+.react-fl-scrollbar {
+    bottom: 0;
+    height: 35px;
+    overflow: auto;
+    position: fixed
+  }
+  
+  .react-fl-scrollbar,
+  .react-fl-scrollbar div {
+    font-size: 1px;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .react-fl-scrollbar div {
+    height: 1px;
+    overflow:auto;
+    /* pointer-events:none; */
+  }
+  
+  .react-fl-scrollbar div:before {
+    content: "\A0"
+  }
+  
+  .react-fl-scrollbar-viewport {
+    position: relative
+  }
+  
+  .react-fl-scrollbar-body {
+    overflow: auto
+  }
+  
+  .react-fl-scrollbar-viewport .react-fl-scrollbar {
+    left: 0;
+    position: absolute
+  }
+  
+  .react-fl-scrollbar-hoverable .react-fl-scrollbar {
+    opacity: 0;
+    transition: opacity .5s ease .3s
+  }
+  
+  .react-fl-scrollbar-hoverable:hover .react-fl-scrollbar {
+    opacity: 1
+  }

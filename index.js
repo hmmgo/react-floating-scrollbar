@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from 'react';
 import PropTypes from 'prop-types';
+import './style.css';
 
 class ReactFlScrollbar extends Component {
   constructor(props) {
@@ -33,7 +34,7 @@ class ReactFlScrollbar extends Component {
     }
 
     if (scrollRefEl) {
-      const elToScrolls = document.getElementsByClassName('fl-scrolls')[0];
+      const elToScrolls = document.getElementsByClassName('react-fl-scrollbar')[0];
       elToScrolls.onscroll = (e) => {
         lots.syncCont(e.target, true);
       };
@@ -98,7 +99,7 @@ class ReactFlScrollbar extends Component {
       <Fragment>
         {this.props.children}
         <div
-          className={'fl-scrolls'}
+          className={'react-fl-scrollbar'}
           style={{ width: `${contentRefEl ? contentRefEl.offsetWidth : 0}px`,
             left: `${contentRefEl ? contentRefEl.getBoundingClientRect().left : 0}px` }}
           ref={this.scrollRef}
