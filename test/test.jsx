@@ -33,10 +33,12 @@ describe('<ReactFlScrollbar/> states', function () {
         window.pageYOffset = 0;
     });
 
+    this.scrollRef = React.createRef();
+
     // and each `it` function describes an individual test
     it('is hidden when first rendered', function () {
         let renderedComponent = TestUtils.renderIntoDocument(
-            <ReactFlScrollbar contentRef={this.contentRef} innerScrollableClass={'test'}>
+            <ReactFlScrollbar contentRef={this.scrollRef} innerScrollableClass={'test'}>
                 <div className={'test'}>UP</div>
             </ReactFlScrollbar>
         );
@@ -46,7 +48,7 @@ describe('<ReactFlScrollbar/> states', function () {
 
     it('is shown if the page is scrolled past the `showUnder` point', function () {
         let renderedComponent = TestUtils.renderIntoDocument(
-            <ReactFlScrollbar contentRef={this.contentRef} innerScrollableClass={'test'}>
+            <ReactFlScrollbar contentRef={this.scrollRef} innerScrollableClass={'test'}>
                 <div className={'test'}>UP</div>
             </ReactFlScrollbar>
         );
