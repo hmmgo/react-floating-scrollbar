@@ -55,7 +55,7 @@
     "gulp-connect": "^5.7.0",
     "gulp-less": "^4.0.1",
     "jsdom": "11.0.0",
-    "karma": "^4.1.0",
+    "karma": "^6.3.16",
     "karma-chrome-launcher": "^2.0.0",
     "karma-cli": "^1.0.0",
     "karma-mocha": "^1.0.1",
